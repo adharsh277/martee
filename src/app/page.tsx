@@ -43,17 +43,17 @@ export default function Home() {
             <span className="text-blue-600">in Your E-Commerce Store</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Seamless cryptocurrency payments for WooCommerce and Shopify using MNEE stablecoin on Ethereum Sepolia testnet.
+            Seamless cryptocurrency payments for WooCommerce and Shopify using BEP-20 tokens on BNB testnet.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link 
+            <Link
               href="/dashboard"
               className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <a 
+            <a
               href="https://github.com/rizwanmoulvi/cartee-dashboard"
               target="_blank"
               rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Ethereum Network</h3>
               <p className="text-gray-600">
-                Built on Ethereum blockchain with Sepolia testnet support for secure and reliable payment processing.
+                Built on BNB Smart Chain with testnet support for secure and reliable payment processing.
               </p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -169,18 +169,18 @@ export default function Home() {
           <p className="text-gray-600 mb-8">
             Start accepting MNEE stablecoin payments in your store today.
             <br />
-            Test on Sepolia testnet before going live.
+            Test on BNB testnet before going live.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link 
+            <Link
               href="/dashboard"
               className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
             >
               <span>Launch Dashboard</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <a 
-              href="https://sepolia.etherscan.io"
+            <a
+              href="https://testnet.bscscan.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
@@ -199,7 +199,7 @@ export default function Home() {
             Cartee - Cryptocurrency payment gateway for e-commerce
           </p>
           <p>
-            Built with ❤️ for the Ethereum ecosystem | 
+            Built with ❤️ for the Ethereum ecosystem |
             <a href="https://github.com/rizwanmoulvi/cartee-dashboard" className="text-blue-600 hover:text-blue-700 ml-1">
               Open Source
             </a>

@@ -1,0 +1,97 @@
+╔════════════════════════════════════════════════════════════════╗
+║                 🚀 TOKEN DEPLOYMENT CHECKLIST                  ║
+╚════════════════════════════════════════════════════════════════╝
+
+BEFORE YOU START
+□ MetaMask installed and unlocked
+□ Project running (npm run dev)
+□ Contract file ready at: contracts/TestBNBToken.sol
+
+DEPLOYMENT STEPS
+□ Step 1: Add BNB Testnet to MetaMask (Chain ID: 97)
+□ Step 2: Get test BNB from faucet (https://testnet.bnbchain.org/faucet-smart)
+□ Step 3: Open Remix (https://remix.ethereum.org)
+□ Step 4: Create TestBNBToken.sol in Remix
+□ Step 5: Compile contract (Solidity 0.8.20)
+□ Step 6: Deploy with MetaMask (Constructor: 1000000000000000000000000000)
+□ Step 7: Copy contract address
+□ Step 8: Verify on BSCScan (optional)
+□ Step 9: Update .env file with contract address
+□ Step 10: Restart npm run dev
+□ Step 11: Test at localhost:3000/faucet
+
+POST-DEPLOYMENT
+□ Contract shows on BSCScan
+□ Token appears in MetaMask (add custom token)
+□ Faucet page connects successfully
+□ Can mint tokens from faucet
+□ Blockchain listener can track transfers
+
+╔════════════════════════════════════════════════════════════════╗
+║                      IMPORTANT VALUES                          ║
+╚════════════════════════════════════════════════════════════════╝
+
+BNB TESTNET DETAILS:
+  Network Name: BNB Smart Chain Testnet
+  RPC URL: https://data-seed-prebsc-1-s1.binance.org:8545
+  Chain ID: 97
+  Symbol: tBNB
+  Explorer: https://testnet.bscscan.com
+
+CONSTRUCTOR PARAMETER:
+  Initial Supply: 1000000000000000000000000000
+  (This is 1 billion tokens with 18 decimals)
+
+TOKEN INFO:
+  Name: Test BNB Payment Token
+  Symbol: tBNBP
+  Decimals: 18
+  Max Mint per Transaction: 1,000,000 tokens
+  Cooldown Period: 1 hour
+
+╔════════════════════════════════════════════════════════════════╗
+║                      QUICK LINKS                               ║
+╚════════════════════════════════════════════════════════════════╝
+
+✓ Remix IDE: https://remix.ethereum.org
+✓ BNB Faucet: https://testnet.bnbchain.org/faucet-smart
+✓ BSCScan Testnet: https://testnet.bscscan.com
+✓ Chainlist: https://chainlist.org/?search=bsc+testnet
+
+✓ Full Guide: See DEPLOYMENT_GUIDE.md
+✓ Migration Info: See MIGRATION_SUMMARY.md
+✓ Quick Reference: See BNB_QUICK_REFERENCE.md
+
+╔════════════════════════════════════════════════════════════════╗
+║                    COMMON ISSUES & FIXES                       ║
+╚════════════════════════════════════════════════════════════════╝
+
+"Insufficient funds"
+  → Get more test BNB from faucet
+
+"Wrong network"
+  → Switch MetaMask to BNB Testnet (97)
+
+"Contract won't compile"
+  → Check Solidity version is 0.8.20+
+  → Make sure you copied full contract code
+
+"MetaMask not connecting"
+  → Refresh Remix page
+  → Unlock MetaMask
+  → Try "Injected Provider" again
+
+╔════════════════════════════════════════════════════════════════╗
+║              📝 WRITE YOUR DEPLOYED ADDRESS HERE               ║
+╚════════════════════════════════════════════════════════════════╝
+
+Deployed Contract Address: 0x________________________________________
+
+Deployment Transaction Hash: 0x_____________________________________
+
+Date Deployed: ____/____/2026
+
+Notes:
+___________________________________________________________________
+___________________________________________________________________
+___________________________________________________________________

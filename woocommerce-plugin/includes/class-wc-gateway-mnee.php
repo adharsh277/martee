@@ -91,11 +91,19 @@ class WC_Gateway_MNEE extends WC_Payment_Gateway {
             ),
             'api_key' => array(
                 'title'       => __('API Key', 'wc-MNEE-gateway'),
-                'type'        => 'api_key_with_connect',
-                'description' => __('Enter your MNEE payment gateway API key and click Connect to verify.', 'wc-MNEE-gateway'),
+                'type'        => 'password',
+                'description' => __('Enter your Cartee API key from your merchant dashboard. Get it from: cartee-dashboard.vercel.app → Dashboard → WooCommerce tab.', 'wc-MNEE-gateway'),
                 'default'     => '',
-                'desc_tip'    => true,
-                'placeholder' => __('Enter your API key here', 'wc-MNEE-gateway'),
+                'desc_tip'    => false,
+                'placeholder' => __('ck_xxxxxxxxxxxxxxxxxxxx', 'wc-MNEE-gateway'),
+            ),
+            'cartee_server_url' => array(
+                'title'       => __('Cartee Server URL', 'wc-MNEE-gateway'),
+                'type'        => 'text',
+                'description' => __('URL of your Cartee backend. Use http://localhost:3000 for local development, or https://cartee-dashboard.vercel.app for production.', 'wc-MNEE-gateway'),
+                'default'     => 'https://cartee-dashboard.vercel.app',
+                'desc_tip'    => false,
+                'placeholder' => 'http://localhost:3000',
             ),
             // 'test_merchant_id' => array(
             //     'title'       => __('Test Merchant ID', 'wc-MNEE-gateway'),
@@ -307,8 +315,9 @@ class WC_Gateway_MNEE extends WC_Payment_Gateway {
             // Mark order as "on-hold" to prevent reuse
             $order->update_status('on-hold', __('Payment gateway invoice created. Customer redirected to complete payment.', 'wc-MNEE-gateway'));
             
-            // Build redirect URL to payment gateway
-            $payment_url = 'https://cartee-dashboard.vercel.app/pay?orderId=' . urlencode($order->get_order_key());
+            // Build redirect URL to payment gateway (uses same base URL as webhook)
+            $cartee_base  = rtrim($this->get_option('cartee_server_url', 'https://cartee-dashboard.vercel.app'), '/');
+            $payment_url  = $cartee_base . '/pay?orderId=' . urlencode($order->get_order_key());
             
             $this->log('Redirecting to payment gateway: ' . $payment_url);
             
@@ -528,7 +537,8 @@ class WC_Gateway_MNEE extends WC_Payment_Gateway {
     }
 
     private function send_webhook($webhook_data) {
-        $webhook_url = 'https://cartee-dashboard.vercel.app/api/webhooks/woocommerce';
+        $base_url    = rtrim($this->get_option('cartee_server_url', 'https://cartee-dashboard.vercel.app'), '/');
+        $webhook_url = $base_url . '/api/webhooks/woocommerce';
         
         $this->log('Sending webhook to: ' . $webhook_url);
         $this->log('Webhook data: ' . print_r($webhook_data, true));

@@ -12,14 +12,14 @@ import {
 } from '@rainbow-me/rainbowkit/wallets';
 import {
   mainnet,
-  sepolia
+  bscTestnet
 } from 'wagmi/chains';
 import {
   QueryClientProvider,
   QueryClient,
 } from "@tanstack/react-query";
 
-const projectId = 'YOUR_PROJECT_ID'; // Get from https://cloud.walletconnect.com
+const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID';
 
 const connectors = connectorsForWallets(
   [
@@ -36,10 +36,10 @@ const connectors = connectorsForWallets(
 
 const config = createConfig({
   connectors,
-  chains: [mainnet, sepolia],
+  chains: [bscTestnet, mainnet],
   transports: {
     [mainnet.id]: http(),
-    [sepolia.id]: http(),
+    [bscTestnet.id]: http(),
   },
   ssr: true,
 });

@@ -4,7 +4,7 @@ const { __ } = wp.i18n;
 const { decodeEntities } = wp.htmlEntities;
 const { getSetting } = wc.wcSettings;
 
-const settings = getSetting('MNEE_gateway_data', {});
+const settings = getSetting('mnee_gateway_data', {});
 const defaultLabel = __('MNEE Stablecoin', 'wc-MNEE-gateway');
 const label = decodeEntities(settings.title) || defaultLabel;
 
@@ -54,7 +54,7 @@ const Label = () => {
  * MNEE payment method config object.
  */
 const MNEEPaymentMethod = {
-    name: 'MNEE_gateway',
+    name: 'mnee_gateway',
     label: createElement(Label),
     content: createElement(Content),
     edit: createElement(Content),
