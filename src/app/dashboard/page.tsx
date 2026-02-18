@@ -541,6 +541,37 @@ export default function MerchantDashboard() {
                   </nav>
                 </div>
 
+                {/* AI Intelligence */}
+                <div className="mb-6">
+                  <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                    AI Features
+                  </h3>
+                  <nav className="space-y-2">
+                    <a
+                      href="/ai"
+                      className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left text-sm transition-colors"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.12))',
+                        border: '1px solid rgba(99,102,241,0.3)',
+                        color: '#6366f1',
+                        fontWeight: 600,
+                      }}
+                    >
+                      <span style={{ fontSize: '16px' }}>🤖</span>
+                      <span>AI Intelligence</span>
+                      <span style={{
+                        marginLeft: 'auto',
+                        fontSize: '9px',
+                        background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                        color: 'white',
+                        padding: '2px 6px',
+                        borderRadius: '8px',
+                        fontWeight: 700,
+                      }}>NEW</span>
+                    </a>
+                  </nav>
+                </div>
+
                 {/* Documentation */}
                 <div className="mb-6">
                   <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
