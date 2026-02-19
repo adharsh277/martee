@@ -23,7 +23,7 @@ export default function Home() {
             <Link href="/faucet" className="hidden sm:inline text-gray-600 hover:text-gray-900 transition-colors">
               Faucet
             </Link>
-            <a href="https://github.com/rizwanmoulvi/cartee-dashboard" target="_blank" rel="noopener noreferrer" className="hidden sm:inline text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="https://github.com/aryanrajok/cartee" target="_blank" rel="noopener noreferrer" className="hidden sm:inline text-gray-600 hover:text-gray-900 transition-colors">
               GitHub
             </a>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://github.com/rizwanmoulvi/cartee-dashboard"
+              href="https://github.com/aryanrajok/cartee"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-white text-gray-900 px-6 py-3 rounded-xl font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -200,7 +200,7 @@ export default function Home() {
           </p>
           <p>
             Built with ❤️ for the Ethereum ecosystem |
-            <a href="https://github.com/rizwanmoulvi/cartee-dashboard" className="text-blue-600 hover:text-blue-700 ml-1">
+            <a href="https://github.com/aryanrajok/cartee" className="text-blue-600 hover:text-blue-700 ml-1">
               Open Source
             </a>
           </p>

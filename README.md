@@ -27,8 +27,8 @@ The blockchain listener watches for transfers and updates order status in real-t
 ### Installation
 
 ```bash
-git clone https://github.com/rizwanmoulvi/cartee-dashboard.git
-cd cartee-dashboard
+git clone https://github.com/aryanrajok/cartee.git
+cd cartee
 npm install
 ```
 
@@ -198,6 +198,6 @@ MIT
 
 ## Contact
 
-Built by [@rizwanmoulvi](https://github.com/rizwanmoulvi)
+Built by [@aryanrajok](https://github.com/aryanrajok)
 
-Issues: https://github.com/rizwanmoulvi/cartee-dashboard/issues
+Issues: https://github.com/aryanrajok/cartee/issues

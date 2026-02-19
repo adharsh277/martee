@@ -588,7 +588,7 @@ export default function MerchantDashboard() {
                       <span>MNEE Faucet</span>
                     </a>
                     <a
-                      href="https://github.com/rizwanmoulvi/cartee-dashboard"
+                      href="https://github.com/aryanrajok/cartee"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left text-sm text-gray-700 hover:bg-gray-100 transition-colors"
@@ -793,7 +793,7 @@ export default function MerchantDashboard() {
                                   <li>Use the webhook URL above with your API key parameter</li>
                                 </ol>
                                 <a
-                                  href="https://github.com/rizwanmoulvi/cartee-dashboard"
+                                  href="https://github.com/aryanrajok/cartee"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-block mt-2 text-yellow-800 hover:text-yellow-900 underline font-medium"
